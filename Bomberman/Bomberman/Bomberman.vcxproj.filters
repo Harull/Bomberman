@@ -36,19 +36,28 @@
     <ClInclude Include="Block.h">
       <Filter>Object</Filter>
     </ClInclude>
-    <ClInclude Include="Invinsible.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Bonus.h">
       <Filter>Object\Bonus</Filter>
     </ClInclude>
     <ClInclude Include="GigaExplosion.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InfiniteBomb.h">
-      <Filter>Header Files</Filter>
+      <Filter>Object\Bonus</Filter>
     </ClInclude>
     <ClInclude Include="IncreaseBomb.h">
+      <Filter>Object\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="InfiniteBomb.h">
+      <Filter>Object\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="Invinsible.h">
+      <Filter>Object\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BomberMan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -72,12 +81,24 @@
       <Filter>Object\Bonus</Filter>
     </ClCompile>
     <ClCompile Include="GigaExplosion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InfiniteBomb.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Object\Bonus</Filter>
     </ClCompile>
     <ClCompile Include="IncreaseBomb.cpp">
+      <Filter>Object\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="InfiniteBomb.cpp">
+      <Filter>Object\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BomberMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
