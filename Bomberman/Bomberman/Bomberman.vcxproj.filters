@@ -13,5 +13,72 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{cf3f6044-7d3f-455a-aeb8-dcc5533c9caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Bonus">
+      <UniqueIdentifier>{493c9eca-4fb3-46dc-87b0-7c5a39cba87e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coords.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Pawn.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Invinsible.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bonus.h">
+      <Filter>Object\Bonus</Filter>
+    </ClInclude>
+    <ClInclude Include="GigaExplosion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="InfiniteBomb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IncreaseBomb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Block.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Pawn.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Bonus.cpp">
+      <Filter>Object\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="Invinsible.cpp">
+      <Filter>Object\Bonus</Filter>
+    </ClCompile>
+    <ClCompile Include="GigaExplosion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="InfiniteBomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IncreaseBomb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
