@@ -13,5 +13,93 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{840831da-fd7d-4e62-8fa0-6142a85644cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Bonuses">
+      <UniqueIdentifier>{47fdf3e3-7677-42eb-bdb7-3031b4cd3f42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BomberMan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Block.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Pawn.cpp">
+      <Filter>Source Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Bonus.cpp">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClCompile>
+    <ClCompile Include="GigaExplosion.cpp">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClCompile>
+    <ClCompile Include="IncreaseBomb.cpp">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClCompile>
+    <ClCompile Include="InfiniteBomb.cpp">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClCompile>
+    <ClCompile Include="Invinsible.cpp">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Coords.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Block.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Pawn.h">
+      <Filter>Source Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Bonus.h">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClInclude>
+    <ClInclude Include="GigaExplosion.h">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClInclude>
+    <ClInclude Include="IncreaseBomb.h">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClInclude>
+    <ClInclude Include="InfiniteBomb.h">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClInclude>
+    <ClInclude Include="Invinsible.h">
+      <Filter>Source Files\Objects\Bonuses</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BomberMan.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
