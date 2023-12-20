@@ -60,6 +60,9 @@
     <ClInclude Include="BomberMan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Macro.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp">

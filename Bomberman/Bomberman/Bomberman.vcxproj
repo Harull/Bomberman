@@ -137,6 +137,7 @@
     <ClInclude Include="IncreaseBomb.h" />
     <ClInclude Include="InfiniteBomb.h" />
     <ClInclude Include="Invinsible.h" />
+    <ClInclude Include="Macro.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Pawn.h" />
     <ClInclude Include="Player.h" />
