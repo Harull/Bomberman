@@ -1,5 +1,12 @@
 #pragma once
-class GigaExplosion
+#include "Bonus.h"
+
+class GigaExplosion : public Bonus
 {
+	
+
+public:
+	void Use() override;
+
 };
 

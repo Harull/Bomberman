@@ -18,36 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Block.cpp" />
-    <ClCompile Include="Bomb.cpp" />
-    <ClCompile Include="BomberMan.cpp" />
-    <ClCompile Include="Bonus.cpp" />
-    <ClCompile Include="GigaExplosion.cpp" />
-    <ClCompile Include="Grid.cpp" />
-    <ClCompile Include="IncreaseBomb.cpp" />
-    <ClCompile Include="InfiniteBomb.cpp" />
-    <ClCompile Include="Invinsible.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Pawn.cpp" />
-    <ClCompile Include="Player.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Block.h" />
-    <ClInclude Include="Bomb.h" />
-    <ClInclude Include="BomberMan.h" />
-    <ClInclude Include="Bonus.h" />
-    <ClInclude Include="Coords.h" />
-    <ClInclude Include="GigaExplosion.h" />
-    <ClInclude Include="Grid.h" />
-    <ClInclude Include="IncreaseBomb.h" />
-    <ClInclude Include="InfiniteBomb.h" />
-    <ClInclude Include="Invinsible.h" />
-    <ClInclude Include="Object.h" />
-    <ClInclude Include="Pawn.h" />
-    <ClInclude Include="Player.h" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -156,6 +126,29 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Block.h" />
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="Bonus.h" />
+    <ClInclude Include="Coords.h" />
+    <ClInclude Include="GigaExplosion.h" />
+    <ClInclude Include="IncreaseBomb.h" />
+    <ClInclude Include="InfiniteBomb.h" />
+    <ClInclude Include="Invinsible.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Pawn.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Block.cpp" />
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="Bonus.cpp" />
+    <ClCompile Include="GigaExplosion.cpp" />
+    <ClCompile Include="IncreaseBomb.cpp" />
+    <ClCompile Include="InfiniteBomb.cpp" />
+    <ClCompile Include="Invinsible.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Pawn.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

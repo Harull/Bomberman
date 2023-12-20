@@ -1,5 +1,11 @@
 #pragma once
-class InfiniteBomb
+#include "Bonus.h"
+
+class InfiniteBomb : public Bonus
 {
+
+
+public:
+	void Use() override;
 };
 
