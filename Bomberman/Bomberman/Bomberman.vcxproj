@@ -129,25 +129,32 @@
   <ItemGroup>
     <ClInclude Include="Block.h" />
     <ClInclude Include="Bomb.h" />
+    <ClInclude Include="BomberMan.h" />
     <ClInclude Include="Bonus.h" />
     <ClInclude Include="Coords.h" />
     <ClInclude Include="GigaExplosion.h" />
+    <ClInclude Include="Grid.h" />
     <ClInclude Include="IncreaseBomb.h" />
     <ClInclude Include="InfiniteBomb.h" />
     <ClInclude Include="Invinsible.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Pawn.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="BomberMan.cpp" />
     <ClCompile Include="Bonus.cpp" />
     <ClCompile Include="GigaExplosion.cpp" />
+    <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IncreaseBomb.cpp" />
     <ClCompile Include="InfiniteBomb.cpp" />
     <ClCompile Include="Invinsible.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Pawn.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

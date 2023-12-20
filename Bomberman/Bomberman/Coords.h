@@ -1,6 +1,7 @@
 #pragma once
+#include <iostream>
 
 struct Coords
 {
-	pair<int, int> coordinates;
+	std::pair<int, int> coordinates;
 };

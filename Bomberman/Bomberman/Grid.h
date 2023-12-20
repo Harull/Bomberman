@@ -21,8 +21,9 @@ private:
     Grid();
 
 private:
-    std::vector<std::vector<Object*>> grid
+    std::vector<std::vector<Object*>> grid;
 
 
 
 };
+
