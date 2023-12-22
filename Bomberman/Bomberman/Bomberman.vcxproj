@@ -131,6 +131,7 @@
     <ClInclude Include="Bomb.h" />
     <ClInclude Include="BomberMan.h" />
     <ClInclude Include="Bonus.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="Coords.h" />
     <ClInclude Include="GigaExplosion.h" />
     <ClInclude Include="Grid.h" />

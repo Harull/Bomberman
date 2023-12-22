@@ -1,14 +1,16 @@
 #pragma once
-#pragma once
 #include <string>
 #include <vector>
 #include <iostream>
+#include <random>
 
 #define STR(_x) std::to_string(_x)
 #define ENDL std::cout << std::endl
 #define WAIT_CLS ENDL ;system("pause"); system("cls")
 #define INT_PAIR std::pair<int,int>
 #define VECTOR_INT_PAIR std::vector<INT_PAIR>
+#define STTC(x, y) static_cast<x>(y)
+#define INTC(y) STTC(int, y)
 
 namespace macro
 {
@@ -76,4 +78,23 @@ namespace macro
 		return -1;
 	}
 
+	static int RandomMaxMin(const int _max, const int _min = 0)
+	{
+		mt19937 _rng(random_device{}());
+		uniform_int_distribution<int> _distribution(_min, _max);
+		return _distribution(_rng);
+	}
+
+	template<typename T>
+	void ShuffleVector(std::vector<T>& _vectorToShffl)
+	{
+		const int _arraySize = STTC(int, _vectorToShffl.size());
+		for (int _i = 0; _i < _arraySize; _i++)
+		{
+			int _whereToDel = RandomMaxMin(_arraySize - 1);
+			T _buff = _vectorToShffl[_whereToDel];
+			_vectorToShffl.erase(_vectorToShffl.begin() + _whereToDel);
+			_vectorToShffl.emplace(_vectorToShffl.begin() + RandomMaxMin(_arraySize - 2), _buff);
+		}
+	}
 }
