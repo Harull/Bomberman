@@ -9,8 +9,9 @@
 #define WAIT_CLS ENDL ;system("pause"); system("cls")
 #define INT_PAIR std::pair<int,int>
 #define VECTOR_INT_PAIR std::vector<INT_PAIR>
-#define STTC(x, y) static_cast<x>(y)
-#define INTC(y) STTC(int, y)
+#define STTC_C(x, y) static_cast<x>(y)
+#define STTC_ARRAY_SIZE(x) sizeof(x)/ sizeof(x[0])
+#define INT_C(y) STTC_C(int, y)
 
 namespace macro
 {
@@ -80,15 +81,15 @@ namespace macro
 
 	static int RandomMaxMin(const int _max, const int _min = 0)
 	{
-		mt19937 _rng(random_device{}());
-		uniform_int_distribution<int> _distribution(_min, _max);
+		std::mt19937 _rng(std::random_device{}());
+		std::uniform_int_distribution<int> _distribution(_min, _max);
 		return _distribution(_rng);
 	}
 
 	template<typename T>
 	void ShuffleVector(std::vector<T>& _vectorToShffl)
 	{
-		const int _arraySize = STTC(int, _vectorToShffl.size());
+		const int _arraySize = STTC_C(int, _vectorToShffl.size());
 		for (int _i = 0; _i < _arraySize; _i++)
 		{
 			int _whereToDel = RandomMaxMin(_arraySize - 1);

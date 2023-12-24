@@ -26,6 +26,7 @@ public:
 public:
 	Object();
 	Object(const Coords& _coords);
+	Object(const std::string& _look, const bool _hasCollision, const bool _stopsExplosions);
 	Object(const Coords& coords, bool hasCollision, bool stopsExplosion);
 		
 public:

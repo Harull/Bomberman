@@ -9,7 +9,7 @@
 class Object;
 enum AmountOfFreeBlockPerCavity
 {
-    NONE = 0, LOW = 3, MID = 6, HIGH = 10
+    AM_NONE = 0, LOW = 3, MID = 6, HIGH = 10
 };
 
 
@@ -25,18 +25,36 @@ public:
         return instance;
     }
 
+    /// <summary>
+    /// Nous donne les coordonnées de la prochaine case en avançant dans la direction indiquée, et depuis les coordonnées indiquées
+    /// </summary>
+    /// <param name="_coordinates">Les coords du point initial (dans notre cas position du joueur attendue)</param>
+    /// <param name="_direction">La direction dans laquelle se dirige notre joueur</param>
+    /// <returns></returns>
     static Coords GetNextWall(const Coords& _coordinates, const Direction& _direction)
     {
         return GetInstance().IGetNextWall(_coordinates, _direction);
     }
+    /// <summary>
+    /// Téléporte l'objet aux coordonnées initiale, aux coordonnées souhaitée. 
+    /// Laissant à l'ancienne position un objet vide
+    /// </summary>
+    /// <param name="_current">Coordonnées actuelle de l'objet</param>
+    /// <param name="_towards">Coordonnées souhaitées de l'objet</param>
     static void MoveToCoordinates(const Coords& _current, const Coords& _towards)
     {
         GetInstance().IMoveToCoordinates(_current, _towards);
     }
+    /// <summary>
+    /// Get notre Grille
+    /// </summary>
     static std::vector<std::vector<Object*>> GetGrid()
     {
         return GetInstance().grid;
     }
+    /// <summary>
+    /// Affiche notre grille
+    /// </summary>
     static void DisplayGrid()
     {
         GetInstance().IDisplayGrid();
@@ -50,23 +68,8 @@ private:
     std::vector<std::vector<Object*>> grid;
     std::pair<int, int> heightWidth;
 
-    /// <summary>
-    /// Nous donne les coordonnées de la prochaine case en avançant dans la direction indiquée, et depuis les coordonnées indiquées
-    /// </summary>
-    /// <param name="_coordinates">Les coords du point initial (dans notre cas position du joueur attendue)</param>
-    /// <param name="_direction">La direction dans laquelle se dirige notre joueur</param>
-    /// <returns></returns>
     Coords IGetNextWall(const Coords& _coordinates, const Direction& _direction);
-    /// <summary>
-    /// Téléporte l'objet aux coordonnées initiale, aux coordonnées souhaitée. 
-    /// Laissant à l'ancienne position un objet vide
-    /// </summary>
-    /// <param name="_current">Coordonnées actuelle de l'objet</param>
-    /// <param name="_towards">Coordonnées souhaitées de l'objet</param>
     void IMoveToCoordinates(const Coords& _current, const Coords& _towards);
-    /// <summary>
-    /// Affiche notre grille
-    /// </summary>
     void IDisplayGrid();
 
 private:

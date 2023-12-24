@@ -16,6 +16,15 @@ Object::Object(const Coords& _coords)
     stopsExplosion = false;
 }
 
+Object::Object(const std::string& _look, const bool _hasCollision,
+    const bool _stopsExplosions)
+{
+    look = "  ";
+    coords = Coords();
+    hasCollision = _hasCollision;
+    stopsExplosion = _stopsExplosions;
+}
+
 Object::Object(const Coords& coords, bool hasCollision, bool stopsExplosion)
     : coords(coords), hasCollision(hasCollision), stopsExplosion(stopsExplosion)
 {

@@ -1,13 +1,17 @@
 #pragma once
 #include "Object.h"
+#include "PawnColorManager.h"
 
-
-class Pawn
+class Pawn : public Object
 {
-	string color;
 	bool IsImune;
 
 public:
+	Pawn();
+
+
+public:
 	void Move(const Coords& _coordinates);
+	
 };
 

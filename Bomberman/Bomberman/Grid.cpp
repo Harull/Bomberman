@@ -103,20 +103,20 @@ void Grid::InitBreakableBlocks()
 	int _answerToWitchEnum = macro::AskTypeAnsFromSring<int>(
 		"1|High void gen\n2|Mid void gen\n3|Low void gen\n4|No void (déconseillé)", 1, 4);
 	_enum = _answerToWitchEnum == 1 ? HIGH : _answerToWitchEnum == 2 ? MID
-		: _answerToWitchEnum == 3 ? LOW : NONE;
+		: _answerToWitchEnum == 3 ? LOW : AM_NONE;
 	switch (_enum)
 	{
-	case NONE:
+	case AM_NONE:
 		FillAll();
 		break;
 	case LOW:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::LOW, INTC(ceil(18 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::LOW, INT_C(ceil(18 / heightWidth.first * heightWidth.second)));
 		break;
 	case MID:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::MID, INTC(ceil(25 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::MID, INT_C(ceil(25 / heightWidth.first * heightWidth.second)));
 		break;
 	case HIGH:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::HIGH, INTC(ceil(41 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::HIGH, INT_C(ceil(41 / heightWidth.first * heightWidth.second)));
 		break;
 	default:
 		std::cerr << "Error InitBreakableBlocks" << std::endl;
@@ -293,8 +293,8 @@ Object* Grid::GetRandomBreakableBlock()
 	if (!CheckAtLeastOneBreakableBlockInArray()) return nullptr;
 	while (true)
 	{
-		int _randomIndexY = macro::RandomMaxMin(STTC(int, grid.size()) - 1);
-		int _randomIndexX = macro::RandomMaxMin(STTC(int, grid[_randomIndexY].size()-1));
+		int _randomIndexY = macro::RandomMaxMin(STTC_C(int, grid.size()) - 1);
+		int _randomIndexX = macro::RandomMaxMin(STTC_C(int, grid[_randomIndexY].size()-1));
 
 		if (dynamic_cast<Block*>(grid[_randomIndexY][_randomIndexX]))
 		{
@@ -351,5 +351,3 @@ void Grid::TransformAllBreakableBlockNeighborInMotherObject(Object*& _toTransfor
 			TransformAllBreakableBlockNeighborInMotherObject(_obj, _currentEmptyBlockCount, _freeBlockNeededCount);
 	}
 }
-
-
