@@ -15,9 +15,22 @@ Coords Grid::IGetNextWall(const Coords& _coordinates, const Direction& _directio
 	return Coords();
 }
 
-void Grid::IMoveToCoordinates(const Coords& _current, const Coords& _towards)
+void Grid::IMovePawnToCoordinates(Pawn* _current, const Coords& _towards)
 {
+	Object*& _finalObject = grid[_towards.coordinates.first][_towards.coordinates.second];
+	delete _finalObject;
+	_finalObject = _current;
+
+	Coords _initialLocation = _current->GetCoords();
+	if (_initialLocation != Coords({0,0}))
+	{
+		int _first = _initialLocation.coordinates.first, _second = _initialLocation.coordinates.second;
+		grid[_first][_second] = new Object(Coords({ _first, _second }));
+	}
+
+	_current->SetCoordinates(_towards);
 }
+
 
 void Grid::IDisplayGrid()
 {

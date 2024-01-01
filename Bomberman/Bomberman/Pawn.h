@@ -7,7 +7,7 @@ class Pawn : public Object
 	bool IsImune;
 
 public:
-	Pawn();
+	Pawn(const std::string& _name);
 
 
 public:

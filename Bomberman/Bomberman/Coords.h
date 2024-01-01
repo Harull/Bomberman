@@ -19,4 +19,9 @@ struct Coords
 	{
 		return coordinates == other.coordinates;
 	}
+
+	bool operator!=(const Coords& other) const
+	{
+		return coordinates != other.coordinates;
+	}
 };

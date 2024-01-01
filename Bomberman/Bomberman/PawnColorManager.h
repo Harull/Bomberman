@@ -19,9 +19,9 @@ public:
 		static PawnColorManager instance;
 		return instance;
 	}
-	static std::string ChosePawnColor()
+	static std::string ChosePawnColor(const std::string& _name)
 	{
-		return GetInst().IChosePawnColor();
+		return GetInst().IChosePawnColor(_name);
 	}
 public:
 
@@ -35,6 +35,6 @@ private:
 	void InitColorsAvailable();
 
 private:
-	std::string IChosePawnColor();
+	std::string IChosePawnColor(const std::string& _name);
 };
 

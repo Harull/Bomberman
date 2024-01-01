@@ -19,7 +19,7 @@ Object::Object(const Coords& _coords)
 Object::Object(const std::string& _look, const bool _hasCollision,
     const bool _stopsExplosions)
 {
-    look = "  ";
+    look = _look;
     coords = Coords();
     hasCollision = _hasCollision;
     stopsExplosion = _stopsExplosions;

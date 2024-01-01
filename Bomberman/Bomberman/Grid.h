@@ -41,9 +41,9 @@ public:
     /// </summary>
     /// <param name="_current">Coordonnées actuelle de l'objet</param>
     /// <param name="_towards">Coordonnées souhaitées de l'objet</param>
-    static void MoveToCoordinates(const Coords& _current, const Coords& _towards)
+    static void MovePawnToCoordinates(Pawn* _currentPawn, const Coords& _towards)
     {
-        GetInstance().IMoveToCoordinates(_current, _towards);
+        GetInstance().IMovePawnToCoordinates(_currentPawn, _towards);
     }
     /// <summary>
     /// Get notre Grille
@@ -59,6 +59,10 @@ public:
     {
         GetInstance().IDisplayGrid();
     }
+    static std::pair<int, int> GetHeightWidth()
+    {
+        return GetInstance().heightWidth;
+    }
 
 private:
     Grid();
@@ -69,7 +73,7 @@ private:
     std::pair<int, int> heightWidth;
 
     Coords IGetNextWall(const Coords& _coordinates, const Direction& _direction);
-    void IMoveToCoordinates(const Coords& _current, const Coords& _towards);
+    void IMovePawnToCoordinates(Pawn* _current, const Coords& _towards);
     void IDisplayGrid();
 
 private:

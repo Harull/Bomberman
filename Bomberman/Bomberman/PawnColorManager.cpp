@@ -14,7 +14,6 @@ PawnColorManager::PawnColorManager()
 void PawnColorManager::InitColorsAvailable()
 {
 	std::string _arrayOfBg[]{
-		BG_WHITE,
 		BG_BLACK,
 	};
 
@@ -34,11 +33,11 @@ void PawnColorManager::InitColorsAvailable()
 	}
 }
 
-std::string PawnColorManager::IChosePawnColor()
+std::string PawnColorManager::IChosePawnColor(const std::string& _name)
 {
 	assert(colorsAvailable.size() > 0 && "Ya pas de choix de couleurs");
 
-	std::string _pawnsLeft = "Veuillez choisir un pion parmis les suivants:\n";
+	std::string _pawnsLeft = _name + ", veuillez choisir un pion parmis les suivants:\n";
 	for (int _i = 0; _i < colorsAvailable.size(); _i++)
 	{
 		_pawnsLeft += "Pion num\x82ro " + STR(_i + 1) + ": " + colorsAvailable[_i].fgColor +

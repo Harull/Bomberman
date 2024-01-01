@@ -6,7 +6,8 @@
 
 #define STR(_x) std::to_string(_x)
 #define ENDL std::cout << std::endl
-#define WAIT_CLS ENDL ;system("pause"); system("cls")
+#define CLS system("cls")
+#define WAIT_CLS ENDL ;system("pause"); CLS
 #define INT_PAIR std::pair<int,int>
 #define VECTOR_INT_PAIR std::vector<INT_PAIR>
 #define STTC_C(x, y) static_cast<x>(y)

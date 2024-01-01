@@ -3,13 +3,12 @@
 #include "Macro.h"
 #include <vector>
 #include "Player.h"
+#include "BomberMan.h"
 
 int main()
-{
-	
-	Player _testPlayer;
-	Grid::DisplayGrid();
-	
+{	
+	BomberMan _bomberman;
+	_bomberman.Start();
 
 	return 0;
 }

@@ -11,10 +11,12 @@ enum Direction
 class Player 
 {
 	Pawn* pawn;
+	int id;
+	std::string name;
 	std::vector<Bomb*> bombSac;
 
 public:
-	Player();
+	Player(const std::string& _name, const int _id);
 	~Player();
 
 private:
@@ -23,6 +25,6 @@ private:
 public:
 	void DropBomb();
 	void MovePawn(const Direction& _direction);
-
+	void TeleportPawnToCoordinates(const Coords& _coordinates);
 };
 
