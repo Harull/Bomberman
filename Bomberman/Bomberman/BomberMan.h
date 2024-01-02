@@ -3,6 +3,9 @@
 #include "Player.h"
 #include <vector>
 #include "Macro.h"
+#include <list>
+
+
 
 class BomberMan
 {
@@ -21,9 +24,8 @@ private:
 
 private:
 	void GameLoop();
+
 public:
 	void Start();
 };
-
-
 

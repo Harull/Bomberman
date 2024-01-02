@@ -11,7 +11,7 @@ public:
 
 
 public:
-	void Move(const Coords& _coordinates);
+	void Move(const Coords& _coordinates, const bool _updateScreen = false);
 	
 };
 

@@ -1,6 +1,9 @@
 #include "BomberMan.h"
 #include "Coords.h"
 #include "Macro.h"
+#include <conio.h>
+#include <thread>
+#include "Functions.h"
 
 BomberMan::BomberMan()
 {
@@ -59,7 +62,14 @@ void BomberMan::SetPlayerStartPositions()
 void BomberMan::GameLoop()
 {
 	Grid::DisplayGrid();
+	Player* _player = players[0];
+	std::thread _playerOneCommandsLoop(&PlayerCommandLoop, _player);
+	//Start les thread des inputs
+
+	_playerOneCommandsLoop.join();
 }
+
+
 
 void BomberMan::Start()
 {

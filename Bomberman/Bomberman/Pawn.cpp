@@ -6,7 +6,7 @@ Pawn::Pawn(const std::string& _name) : Object(PawnColorManager::ChosePawnColor(_
 	IsImune = false;
 }
 
-void Pawn::Move(const Coords& _coordinates)
+void Pawn::Move(const Coords& _coordinates, const bool _updateScreen)
 {
-	Grid::MovePawnToCoordinates(this, _coordinates);
+	Grid::MovePawnToCoordinates(this, _coordinates, _updateScreen);
 }

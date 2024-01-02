@@ -1,6 +1,7 @@
 #include "Grid.h"
 #include "Macro.h"
 #include "Block.h"
+#include "SetCursor.h"
 
 Grid::Grid()
 {
@@ -15,7 +16,7 @@ Coords Grid::IGetNextWall(const Coords& _coordinates, const Direction& _directio
 	return Coords();
 }
 
-void Grid::IMovePawnToCoordinates(Pawn* _current, const Coords& _towards)
+void Grid::IMovePawnToCoordinates(Pawn* _current, const Coords& _towards, const bool _updateScreen)
 {
 	Object*& _finalObject = grid[_towards.coordinates.first][_towards.coordinates.second];
 	delete _finalObject;
@@ -27,8 +28,13 @@ void Grid::IMovePawnToCoordinates(Pawn* _current, const Coords& _towards)
 		int _first = _initialLocation.coordinates.first, _second = _initialLocation.coordinates.second;
 		grid[_first][_second] = new Object(Coords({ _first, _second }));
 	}
-
 	_current->SetCoordinates(_towards);
+
+	if (_updateScreen)
+	{
+		UpdateCoordinates(_initialLocation);
+		UpdateCoordinates(_towards);
+	}
 }
 
 
@@ -363,4 +369,23 @@ void Grid::TransformAllBreakableBlockNeighborInMotherObject(Object*& _toTransfor
 		if (IsABreakableBlock(_obj))
 			TransformAllBreakableBlockNeighborInMotherObject(_obj, _currentEmptyBlockCount, _freeBlockNeededCount);
 	}
+}
+
+void Grid::UpdateCoordinates(const Coords& _cordinates)
+{
+	try
+	{
+		if (!(_cordinates.coordinates.first >= 0 && _cordinates.coordinates.first < heightWidth.first)) 
+			throw std::exception("index height invalide");
+		if (!(_cordinates.coordinates.second >= 0 && _cordinates.coordinates.second < grid[_cordinates.coordinates.first].size()))
+			throw std::exception("index width invalide");
+	}
+	catch (const std::exception& _error)
+	{
+		std::cerr << "Erreur UpdateCoordinates, " << _error.what() << endl;
+		return;
+	}
+
+	SetCursorPosition(_cordinates.coordinates);
+	std::cout << *grid[_cordinates.coordinates.first][_cordinates.coordinates.second];	
 }

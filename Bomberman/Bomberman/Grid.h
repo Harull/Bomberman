@@ -5,7 +5,6 @@
 #include "Player.h"
 #include "Macro.h"
 
-//Init Singleton
 class Object;
 enum AmountOfFreeBlockPerCavity
 {
@@ -41,9 +40,9 @@ public:
     /// </summary>
     /// <param name="_current">Coordonnées actuelle de l'objet</param>
     /// <param name="_towards">Coordonnées souhaitées de l'objet</param>
-    static void MovePawnToCoordinates(Pawn* _currentPawn, const Coords& _towards)
+    static void MovePawnToCoordinates(Pawn* _currentPawn, const Coords& _towards, const bool _updateScreen = false)
     {
-        GetInstance().IMovePawnToCoordinates(_currentPawn, _towards);
+        GetInstance().IMovePawnToCoordinates(_currentPawn, _towards, _updateScreen);
     }
     /// <summary>
     /// Get notre Grille
@@ -73,7 +72,7 @@ private:
     std::pair<int, int> heightWidth;
 
     Coords IGetNextWall(const Coords& _coordinates, const Direction& _direction);
-    void IMovePawnToCoordinates(Pawn* _current, const Coords& _towards);
+    void IMovePawnToCoordinates(Pawn* _current, const Coords& _towards, const bool _updateScreen = false);
     void IDisplayGrid();
 
 private:
@@ -144,6 +143,10 @@ private:
     // et ce jusqu'à ce que le nombre de block vide actuel < nombre de block vide demandé pour former la cavité
     void TransformAllBreakableBlockNeighborInMotherObject(Object*& _toTransform,
         int& _currentEmptyBlockCount, const int _freeBlockNeededCount);
+    /// <summary>
+    /// Uptate le block aux coordonnées indiquées
+    /// </summary>
+    void UpdateCoordinates(const Coords& _cordinates);
 
 };
 

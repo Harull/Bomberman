@@ -17,6 +17,7 @@ protected:
 public:
 	std::string GetLook()const { return look; }
 	Coords GetCoords()const { return coords; }
+	bool GetHasCollision() const { return hasCollision; }
 	virtual BlastResistance GetBlastResistance()const 
 	{
 		std::cerr << "Cet objet ne possède pas de résistance";
