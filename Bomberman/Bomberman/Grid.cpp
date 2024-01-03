@@ -23,7 +23,7 @@ void Grid::IMovePawnToCoordinates(Pawn* _current, const Coords& _towards, const 
 	_finalObject = _current;
 
 	Coords _initialLocation = _current->GetCoords();
-	if (_initialLocation != Coords({0,0}))
+	if (_initialLocation != Coords({-1,-1}))
 	{
 		int _first = _initialLocation.coordinates.first, _second = _initialLocation.coordinates.second;
 		grid[_first][_second] = new Object(Coords({ _first, _second }));
@@ -129,13 +129,13 @@ void Grid::InitBreakableBlocks()
 		FillAll();
 		break;
 	case LOW:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::LOW, INT_C(ceil(18 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::LOW, heightWidth.first);
 		break;
 	case MID:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::MID, INT_C(ceil(25 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::MID, heightWidth.first);
 		break;
 	case HIGH:
-		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::HIGH, INT_C(ceil(41 / heightWidth.first * heightWidth.second)));
+		FillGridWBreakableBlocks(AmountOfFreeBlockPerCavity::HIGH, heightWidth.first);
 		break;
 	default:
 		std::cerr << "Error InitBreakableBlocks" << std::endl;
@@ -373,6 +373,7 @@ void Grid::TransformAllBreakableBlockNeighborInMotherObject(Object*& _toTransfor
 
 void Grid::UpdateCoordinates(const Coords& _cordinates)
 {
+	Coords _coords = _cordinates;
 	try
 	{
 		if (!(_cordinates.coordinates.first >= 0 && _cordinates.coordinates.first < heightWidth.first)) 
@@ -386,6 +387,10 @@ void Grid::UpdateCoordinates(const Coords& _cordinates)
 		return;
 	}
 
-	SetCursorPosition(_cordinates.coordinates);
-	std::cout << *grid[_cordinates.coordinates.first][_cordinates.coordinates.second];	
+	_coords.coordinates.first += 1;
+	_coords.coordinates.second *= 2;
+	_coords.coordinates.second += 2;
+
+	InvertSetCursorPosition(_coords.coordinates);
+	std::cout << *grid[_cordinates.coordinates.first][_cordinates.coordinates.second];
 }

@@ -17,3 +17,9 @@ static void SetCursorPosition(pair<int, int> _pairInt)
 {
     SetCursorPosition(_pairInt.first, _pairInt.second);
 }
+
+static void InvertSetCursorPosition(pair<int, int> _pairInt)
+{
+    //Vous avez manqué de précision dansd l'ordre des x et y ? Voici la soultion
+    SetCursorPosition(_pairInt.second, _pairInt.first);
+}

@@ -62,11 +62,11 @@ void BomberMan::SetPlayerStartPositions()
 void BomberMan::GameLoop()
 {
 	Grid::DisplayGrid();
-	Player* _player = players[0];
-	std::thread _playerOneCommandsLoop(&PlayerCommandLoop, _player);
-	//Start les thread des inputs
+	std::thread _playerOneCommandsLoop(&PlayerCommandLoop, players[0], KeyBindings({ 122,115,113,100 }));
+	std::thread _playerTwoCommandsLoop(&PlayerCommandLoop, players[1], KeyBindings({ 72,80,75,77 }));
 
 	_playerOneCommandsLoop.join();
+	_playerTwoCommandsLoop.join();
 }
 
 
